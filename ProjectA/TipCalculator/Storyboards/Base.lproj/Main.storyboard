@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Fgm-Bl-0vS">
+                                <rect key="frame" x="41.5" y="430.5" width="331" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OJ-r4-OAk" customClass="CalculatorTipButton" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="45"/>
+                                        <state key="normal" title="15%"/>
+                                        <connections>
+                                            <action selector="fifteenPercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HML-aR-4HB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W53-oh-BF2" customClass="CalculatorTipButton" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="115.5" y="0.0" width="100" height="45"/>
+                                        <state key="normal" title="20%"/>
+                                        <connections>
+                                            <action selector="twentyPercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r02-3E-Jlz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYf-O2-uES" customClass="CalculatorTipButton" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="231.5" y="0.0" width="99.5" height="45"/>
+                                        <state key="normal" title="25%"/>
+                                        <connections>
+                                            <action selector="twentyFivePercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pXn-ky-lle"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LkV-QZ-LaC">
+                                <rect key="frame" x="227.5" y="168" width="145" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Total:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsE-Z6-8jz" customClass="CommentAndBillLabel" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-2y-wiM" customClass="CalculatorTextFields" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="76.5" y="0.0" width="68.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lf0-HY-4Xf">
+                                <rect key="frame" x="165.5" y="523.5" width="207" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Tip Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiK-lR-zfn" customClass="CalculatorLabels" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xDJ-aA-16u">
+                                <rect key="frame" x="165.5" y="573.5" width="207" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Final Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CB-Cn-cbO" customClass="CalculatorLabels" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dm6-JO-0GV" customClass="CalculatorTextView" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="250" width="331" height="157"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Comments: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sup-BQ-Hyv" customClass="CommentAndBillLabel" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="210.5" width="124" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xDJ-aA-16u" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.038" id="2gT-T0-e6x"/>
+                            <constraint firstItem="Fgm-Bl-0vS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="2mH-lT-fEx"/>
+                            <constraint firstItem="Dm6-JO-0GV" firstAttribute="top" secondItem="LkV-QZ-LaC" secondAttribute="bottom" constant="48" id="61V-B2-4rs"/>
+                            <constraint firstItem="LkV-QZ-LaC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="7b4-8m-Wsh"/>
+                            <constraint firstItem="Sup-BQ-Hyv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.035" id="9zr-gI-rkW"/>
+                            <constraint firstItem="Dm6-JO-0GV" firstAttribute="leading" secondItem="Fgm-Bl-0vS" secondAttribute="leading" id="AeM-b7-0M8"/>
+                            <constraint firstItem="Fgm-Bl-0vS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="B9F-K9-HQF"/>
+                            <constraint firstItem="LkV-QZ-LaC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.35" id="Cg6-y8-vz9"/>
+                            <constraint firstItem="Dm6-JO-0GV" firstAttribute="top" secondItem="Sup-BQ-Hyv" secondAttribute="bottom" constant="8" id="Ggm-oH-Y0k"/>
+                            <constraint firstItem="lf0-HY-4Xf" firstAttribute="top" secondItem="Fgm-Bl-0vS" secondAttribute="bottom" constant="48" id="HEd-Zc-chY"/>
+                            <constraint firstItem="xDJ-aA-16u" firstAttribute="top" secondItem="lf0-HY-4Xf" secondAttribute="bottom" constant="16" id="ME1-8k-jSW"/>
+                            <constraint firstItem="Sup-BQ-Hyv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="RRA-6u-1Nh"/>
+                            <constraint firstItem="Dm6-JO-0GV" firstAttribute="trailing" secondItem="Fgm-Bl-0vS" secondAttribute="trailing" id="RbO-Se-Q3i"/>
+                            <constraint firstItem="Fgm-Bl-0vS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TNe-tD-8RI"/>
+                            <constraint firstItem="lf0-HY-4Xf" firstAttribute="trailing" secondItem="Fgm-Bl-0vS" secondAttribute="trailing" id="UCp-8L-Ifg"/>
+                            <constraint firstItem="xDJ-aA-16u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Z0P-W0-c3l"/>
+                            <constraint firstItem="Fgm-Bl-0vS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="c0I-Ei-UeF"/>
+                            <constraint firstItem="lf0-HY-4Xf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="hNu-P1-rEw"/>
+                            <constraint firstItem="LkV-QZ-LaC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0379464" id="hT9-Tk-PSu"/>
+                            <constraint firstItem="Dm6-JO-0GV" firstAttribute="height" secondItem="Fgm-Bl-0vS" secondAttribute="height" multiplier="3.5" id="liY-bW-aXL"/>
+                            <constraint firstItem="lf0-HY-4Xf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0379464" id="o3f-it-1u9"/>
+                            <constraint firstItem="LkV-QZ-LaC" firstAttribute="trailing" secondItem="Dm6-JO-0GV" secondAttribute="trailing" id="t8d-SF-D5h"/>
+                            <constraint firstItem="Sup-BQ-Hyv" firstAttribute="leading" secondItem="Dm6-JO-0GV" secondAttribute="leading" id="thb-SR-5G4"/>
+                            <constraint firstItem="xDJ-aA-16u" firstAttribute="trailing" secondItem="lf0-HY-4Xf" secondAttribute="trailing" id="w2I-1A-SJQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentsLabel" destination="Sup-BQ-Hyv" id="0ye-EF-OdI"/>
+                        <outlet property="commentsTextField" destination="Dm6-JO-0GV" id="Ndy-hH-3cS"/>
+                        <outlet property="fifteenPercentButton" destination="2OJ-r4-OAk" id="3pn-aw-Gkk"/>
+                        <outlet property="finalTotalLabel" destination="1CB-Cn-cbO" id="wHt-X4-wkV"/>
+                        <outlet property="initialBillLabel" destination="lsE-Z6-8jz" id="Uz1-IG-wOO"/>
+                        <outlet property="initialBillTextField" destination="fMK-2y-wiM" id="oLH-XQ-PDL"/>
+                        <outlet property="tipAmountLabel" destination="aiK-lR-zfn" id="rcj-m0-EJy"/>
+                        <outlet property="twentyFivePercentButton" destination="AYf-O2-uES" id="ARi-xC-RYn"/>
+                        <outlet property="twentyPercentButton" destination="W53-oh-BF2" id="cT2-ek-rYM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
